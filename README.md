@@ -1,5 +1,7 @@
 # `axios-cookie-auth`
 
+[![npm version](https://badge.fury.io/js/axios-cookie-auth.svg)](https://badge.fury.io/js/axios-cookie-auth)
+
 `axios-cookie-auth` is a reusable TypeScript utility that simplifies API interactions by providing an Axios instance configured for HTTP-only cookie support. It includes error handling, token refresh logic, and customizable logout handling.
 
 ## Installation
