@@ -6,7 +6,7 @@
   "types": "dist/useApi.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build"
+    "lint": "eslint ."
   },
   "files": [
     "dist/",
@@ -31,6 +31,22 @@
     "axios": "^1.7.9"
   },
   "devDependencies": {
-    "typescript": "^5.7.2"
-  }
+    "@eslint/js": "^9.16.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
+    "semantic-release": "^24.2.0",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jszigeti/axios-cookie-auth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jszigeti/axios-cookie-auth/issues"
+  },
+  "homepage": "https://github.com/Jszigeti/axios-cookie-auth#readme"
 }
