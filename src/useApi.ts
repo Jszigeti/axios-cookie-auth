@@ -38,13 +38,13 @@ export function useApi(
       ) {
         originalRequest._retried = true; // Prevent infinite retry loop
         try {
-          // Call refresh token endpoint
-          await api.post(refreshEndpoint); // Handle token refresh
+          // Call refresh token end
+          await api.post(refreshEndpoint);
 
           // Retry original request after refreshing token
           return api(originalRequest);
         } catch (refreshError: unknown) {
-          // If refresh fails, call logoutFn if provided
+          // If refresh fails call logoutFn if provided
           if (logoutFn) logoutFn();
 
           return Promise.reject(refreshError);
