@@ -1,11 +1,10 @@
 # `axios-cookie-auth`
 
+[![CI](https://github.com/Jszigeti/axios-cookie-auth/actions/workflows/ci.yml/badge.svg)](https://github.com/Jszigeti/axios-cookie-auth/actions/workflows/ci.yml)
 [![npm version](https://badge.fury.io/js/axios-cookie-auth.svg)](https://badge.fury.io/js/axios-cookie-auth)
 [![npm downloads](https://img.shields.io/npm/dm/axios-cookie-auth.svg)](https://www.npmjs.com/package/axios-cookie-auth)
-[![CI](https://github.com/Jszigeti/axios-cookie-auth/actions/workflows/ci.yml/badge.svg)](https://github.com/Jszigeti/axios-cookie-auth/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-`axios-cookie-auth` is a reusable TypeScript utility that simplifies API interactions by providing an Axios instance configured for HTTP-only cookie support. It includes error handling, token refresh logic, CSRF protection, and customizable logout handling.
 `axios-cookie-auth` is a reusable TypeScript utility that simplifies API interactions by providing an Axios instance configured for HTTP-only cookie support. It includes error handling, token refresh logic, CSRF protection, and customizable logout handling.
 
 ## Installation
@@ -106,9 +105,9 @@ This package is written in TypeScript and provides the following types:
 - `useCsrf`: `boolean` (Optional, default is `false`)
 - `logoutFn`: `() => void` (Optional)
 
-## Contribution
+## Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development guidelines.
 
 ## License
 

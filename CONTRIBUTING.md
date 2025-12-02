@@ -1,164 +1,110 @@
 # Contributing to axios-cookie-auth
 
-Thank you for your interest in contributing!
+Thank you for your interest in contributing! 🎉
 
 ## Quick Start
 
-1. **Fork and clone** the repository:
+```bash
+# Clone the repository
+git clone https://github.com/Jszigeti/axios-cookie-auth.git
+cd axios-cookie-auth
 
-   ```bash
-   git clone https://github.com/Jszigeti/axios-cookie-auth.git
-   cd axios-cookie-auth
-   ```
+# Install dependencies
+npm install
 
-2. **Install dependencies:**
+# Run tests
+npm test
 
-   ```bash
-   npm install
-   ```
+# Build the project
+npm run build
 
-3. **Run tests:**
+# Lint and format
+npm run lint
+npm run format
+```
 
-   ```bash
-   npm test
-   ```
+## Project Structure
 
-4. **Try the package locally:**
-   ```bash
-   npm run build
-   npm link
-   # Then use it in another project
-   ```
+```
+axios-cookie-auth/
+├── src/
+│   ├── useApi.ts        # Main hook implementation
+│   └── api.d.ts         # TypeScript declarations for axios extensions
+├── tests/
+│   └── useApi.test.ts   # Unit tests for useApi
+├── dist/                # Build output (generated)
+└── .github/             # GitHub workflows and templates
+```
 
 ## Development Workflow
 
-### Project Structure
+1. **Fork** the repository
+2. **Create a branch** for your changes: `git checkout -b feat/my-feature`
+3. **Make your changes** and commit with [conventional commits](#conventional-commits)
+4. **Run tests**: `npm test`
+5. **Format code**: `npm run format`
+6. **Lint code**: `npm run lint`
+7. **Push** and create a Pull Request
 
-```
-src/
-├── useApi.ts        # Main hook implementation
-└── api.d.ts         # TypeScript declarations for axios extensions
-
-tests/
-└── useApi.test.ts   # Unit tests for useApi
-```
-
-### Available Scripts
-
-- `npm run build` - Compile TypeScript to JavaScript
-- `npm run lint` - Run ESLint
-- `npm run format` - Format code with Prettier
-- `npm test` - Run tests with Vitest
-- `npm test -- --run` - Run tests once (no watch mode)
-
-### Code Quality
+## Code Quality Tools
 
 This project uses:
 
-- **TypeScript** with strict mode
-- **ESLint** for linting (flat config)
-- **Prettier** for formatting
-- **Vitest** for testing
-- **Husky** for pre-commit hooks
+- **TypeScript**: Strict type checking
+- **ESLint**: Code linting with flat config
+- **Prettier**: Code formatting
+- **Vitest**: Testing framework
+- **Husky**: Pre-commit hooks
+- **lint-staged**: Run linters on staged files
 
-All code is automatically formatted and linted before commits.
+Pre-commit hooks automatically:
 
-## Making Changes
-
-### 1. Create a branch
-
-```bash
-git checkout -b feature/your-feature-name
-# or
-git checkout -b fix/your-bug-fix
-```
-
-### 2. Make your changes
-
-- Write code
-- Add/update tests
-- Update documentation if needed
-
-### 3. Run quality checks
-
-```bash
-npm run lint
-npm run format
-npm test -- --run
-npm run build
-```
-
-### 4. Commit your changes
-
-Use [conventional commits](https://www.conventionalcommits.org/):
-
-- `feat:` New feature
-- `fix:` Bug fix
-- `docs:` Documentation changes
-- `style:` Code style changes (formatting, etc.)
-- `refactor:` Code refactoring
-- `test:` Adding or updating tests
-- `chore:` Maintenance tasks
-
-Example:
-
-```bash
-git add .
-git commit -m "feat: add support for custom timeout"
-```
-
-### 5. Push and create a Pull Request
-
-```bash
-git push origin feature/your-feature-name
-```
-
-Then open a Pull Request on GitHub with:
-
-- Clear description of changes
-- Link to related issues
-- Screenshots/examples if applicable
+- Lint and fix code with ESLint
+- Format code with Prettier
 
 ## Testing
 
-Write tests for new features:
+```bash
+# Run tests
+npm test
 
-```typescript
-import { describe, it, expect } from 'vitest';
-import { useApi } from '../src/useApi';
+# Run tests in watch mode
+npm test -- --watch
 
-describe('your feature', () => {
-  it('should do something', () => {
-    // Your test
-    expect(true).toBe(true);
-  });
-});
+# Run tests once (no watch mode)
+npm test -- --run
 ```
 
-Run tests:
+Write tests for:
 
-```bash
-npm test
-# or in watch mode
-npm test -- --watch
+- New features
+- Bug fixes
+- Edge cases
+
+## Conventional Commits
+
+We follow [Conventional Commits](https://www.conventionalcommits.org/):
+
+```
+feat: add new feature for CSRF token rotation
+fix: resolve issue with token refresh retry logic
+docs: update README with new examples
+chore: update dependencies
+test: add missing tests for logoutFn
+refactor: simplify interceptor logic
 ```
 
 ## Release Process
 
-This project uses [semantic-release](https://github.com/semantic-release/semantic-release) for automated releases.
+Releases are automated via GitHub Release:
 
-When commits are pushed to `main`:
-
-1. Semantic-release analyzes commit messages
-2. Determines the next version number
-3. Generates changelog
-4. Creates GitHub release
-5. Publishes to npm
+1. Create a new release on GitHub with a tag (e.g., `v1.3.0`)
+2. The publish workflow automatically:
+   - Runs tests and linting
+   - Builds the project
+   - Publishes to npm
+   - Updates the GitHub Release with artifacts
 
 ## Questions?
 
-Feel free to [open an issue](https://github.com/Jszigeti/axios-cookie-auth/issues) for any questions!
-
-## License
-
-MIT © [Jonas Szigeti](https://github.com/Jszigeti)
+Open an issue or reach out to the maintainers!
