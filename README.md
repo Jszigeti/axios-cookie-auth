@@ -1,7 +1,11 @@
 # `axios-cookie-auth`
 
 [![npm version](https://badge.fury.io/js/axios-cookie-auth.svg)](https://badge.fury.io/js/axios-cookie-auth)
+[![npm downloads](https://img.shields.io/npm/dm/axios-cookie-auth.svg)](https://www.npmjs.com/package/axios-cookie-auth)
+[![CI](https://github.com/Jszigeti/axios-cookie-auth/actions/workflows/ci.yml/badge.svg)](https://github.com/Jszigeti/axios-cookie-auth/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+`axios-cookie-auth` is a reusable TypeScript utility that simplifies API interactions by providing an Axios instance configured for HTTP-only cookie support. It includes error handling, token refresh logic, CSRF protection, and customizable logout handling.
 `axios-cookie-auth` is a reusable TypeScript utility that simplifies API interactions by providing an Axios instance configured for HTTP-only cookie support. It includes error handling, token refresh logic, CSRF protection, and customizable logout handling.
 
 ## Installation
@@ -27,19 +31,19 @@ yarn add axios-cookie-auth
 ### Import and Setup
 
 ```typescript
-import { useApi } from "axios-cookie-auth";
+import { useApi } from 'axios-cookie-auth';
 
 const api = useApi(
-  "https://api.example.com", // Base URL for API
-  "/auth/refresh", // Endpoint for token refresh
-  { "Custom-Header": "value" }, // Optional custom headers
+  'https://api.example.com', // Base URL for API
+  '/auth/refresh', // Endpoint for token refresh
+  { 'Custom-Header': 'value' }, // Optional custom headers
   true, // Enable CSRF protection (optional)
-  () => console.log("Logout triggered!") // Optional logout handler
+  () => console.log('Logout triggered!'), // Optional logout handler
 );
 
 // Example API call
 api
-  .get("/endpoint")
+  .get('/endpoint')
   .then((response) => console.log(response.data))
   .catch((error) => console.error(error));
 ```
@@ -66,17 +70,17 @@ api
 
 ```typescript
 const api = useApi(
-  "https://myapi.com",
-  "/refresh",
-  { Authorization: "Bearer token" },
+  'https://myapi.com',
+  '/refresh',
+  { Authorization: 'Bearer token' },
   true, // Enable CSRF protection
   () => {
-    console.log("User logged out.");
-  }
+    console.log('User logged out.');
+  },
 );
 
 api
-  .post("/data", { key: "value" })
+  .post('/data', { key: 'value' })
   .then((response) => console.log(response.data))
   .catch((error) => console.error(error));
 ```

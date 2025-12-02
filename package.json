@@ -6,7 +6,10 @@
   "types": "dist/useApi.d.ts",
   "scripts": {
     "build": "tsc",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "vitest",
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "files": [
     "dist/",
@@ -14,16 +17,19 @@
     "LICENSE"
   ],
   "keywords": [
-    "axios",
-    "token",
-    "auth",
+    "http-client",
     "cookie",
+    "token",
+    "axios",
     "refresh",
+    "cookies",
     "retry",
-    "javascript",
+    "auth",
     "typescript",
+    "authentication",
+    "javascript",
     "httpOnly",
-    "cookies"
+    "api"
   ],
   "author": "Jonas Szigeti",
   "license": "MIT",
@@ -35,11 +41,17 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.1",
+    "@vitest/ui": "^4.0.14",
     "eslint": "^9.16.0",
     "globals": "^15.13.0",
-    "semantic-release": "^24.2.0",
+    "happy-dom": "^20.0.11",
+    "husky": "^8.0.0",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.3",
+    "semantic-release": "^25.0.2",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.18.0"
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^4.0.14"
   },
   "repository": {
     "type": "git",
@@ -48,5 +60,20 @@
   "bugs": {
     "url": "https://github.com/Jszigeti/axios-cookie-auth/issues"
   },
-  "homepage": "https://github.com/Jszigeti/axios-cookie-auth#readme"
+  "homepage": "https://github.com/Jszigeti/axios-cookie-auth#readme",
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }

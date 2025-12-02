@@ -1,4 +1,4 @@
-import axios, { AxiosError, AxiosInstance, AxiosResponse } from "axios";
+import axios, { AxiosError, AxiosInstance, AxiosResponse } from 'axios';
 
 /**
  * Custom hook for creating an Axios instance with error handling, token refresh, and HTTP-only cookie support.
@@ -17,7 +17,7 @@ export function useApi(
   refreshEndpoint: string,
   headers?: Record<string, string>,
   useCsrf: boolean = false,
-  logoutFn?: () => void
+  logoutFn?: () => void,
 ): AxiosInstance {
   // Create axios instance with base url and cookies use
   const api: AxiosInstance = axios.create({
@@ -29,10 +29,10 @@ export function useApi(
   // Create request interceptor if useCsrf is true
   if (useCsrf) {
     api.interceptors.request.use((config) => {
-      const csrfToken = localStorage.getItem("csrfToken");
+      const csrfToken = localStorage.getItem('csrfToken');
       // Add csrf token in request header
       if (csrfToken) {
-        config.headers["x-xsrf-token"] = csrfToken;
+        config.headers['x-xsrf-token'] = csrfToken;
       }
       return config;
     });
@@ -55,7 +55,7 @@ export function useApi(
           const response = await api.post(refreshEndpoint);
           // Store new csrf token in local storage if useCsrf is true
           if (useCsrf)
-            localStorage.setItem("csrfToken", response.data.csrfToken);
+            localStorage.setItem('csrfToken', response.data.csrfToken);
           // Retry original request after refreshing token
           return api(originalRequest);
         } catch (refreshError: unknown) {
@@ -66,7 +66,7 @@ export function useApi(
       }
       // Reject other errors as usual
       return Promise.reject(error);
-    }
+    },
   );
   // Return axios instance
   return api;
