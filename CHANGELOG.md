@@ -5,7 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.3] - 2025-12-16
+## [1.2.3] - 2025-12-22
+
+### Changed
+
+- Updated development dependencies
+  - `@vitest/ui` from 4.0.15 to 4.0.16
+  - `typescript-eslint` from 8.49.0 to 8.50.0
+  - `vitest` from 4.0.15 to 4.0.16
+
+## [1.2.2] - 2025-12-16
 
 ### Changed
 
@@ -14,33 +23,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `eslint` from 9.39.1 to 9.39.2
   - `typescript-eslint` from 8.48.1 to 8.49.0
 
-## [1.3.2] - 2025-12-08
+## [1.2.1] - 2025-12-08
 
 ### Changed
 
-- Updated development dependencies
-  - `prettier` from 3.7.3 to 3.7.4
-  - `typescript-eslint` from 8.18.0 to 8.48.1
-  - `typescript` from 5.7.3 to 5.9.3
-- Package maintenance and security updates
+- Updated development dependencies (3 packages)
 
-### Fixed
-
-- Resolved Jest and ts-jest dependency compatibility issue
-
-## [1.3.1] - 2025-12-02
-
-### Changed
-
-- Dev dependency: `tsx` replaces `ts-node` in generated projects
-- Updated dev script to use `tsx` instead of `ts-node`
-
-### Fixed
-
-- Include `package-lock.json` in initial git commit
-- Fix TypeScript ESM module error with nodemon by replacing `ts-node` with `tsx`
-
-## [1.3.0] - 2025-12-02
+## [1.2.0] - 2025-12-02
 
 ### Added
 
