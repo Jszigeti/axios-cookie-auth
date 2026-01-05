@@ -5,38 +5,46 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.5] - 2026-01-05
+
+### Changed
+
+- Updated development dependencies
+  - typescript-eslint from 8.50.1 to 8.51.0
+  - globals from 16.5.0 to 17.0.0 (major version with new environments: audioWorklet, paintWorklet, sharedWorker, bunBuiltin, denoBuiltin)
+
 ## [1.2.4] - 2025-12-30
 
 ### Changed
 
 - Updated development dependencies
-  - `typescript-eslint` from 8.50.0 to 8.50.1
+  - typescript-eslint from 8.50.0 to 8.50.1
 
 ## [1.2.3] - 2025-12-22
 
 ### Changed
 
 - Updated development dependencies
-  - `typescript-eslint` from 8.49.0 to 8.50.0
-  - `vitest` from 4.0.5 to 4.0.14
+  - typescript-eslint from 8.49.0 to 8.50.0
+  - vitest from 4.0.5 to 4.0.14
 
 ## [1.2.2] - 2025-12-16
 
 ### Changed
 
 - Updated development dependencies
-  - `@eslint/js` from 9.39.1 to 9.39.2
-  - `eslint` from 9.39.1 to 9.39.2
-  - `typescript-eslint` from 8.48.1 to 8.49.0
+  - @eslint/js from 9.39.1 to 9.39.2
+  - eslint from 9.39.1 to 9.39.2
+  - typescript-eslint from 8.48.1 to 8.49.0
 
 ## [1.2.1] - 2025-12-15
 
 ### Changed
 
 - Updated development dependencies
-  - `prettier` from 3.7.3 to 3.7.4
-  - `typescript-eslint` from 8.18.0 to 8.48.1
-  - `typescript` from 5.7.3 to 5.9.3
+  - prettier from 3.7.3 to 3.7.4
+  - typescript-eslint from 8.18.0 to 8.48.1
+  - typescript from 5.7.3 to 5.9.3
 - Package maintenance and security updates
 
 ## [1.2.0] - 2025-12-08
