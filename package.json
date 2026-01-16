@@ -1,6 +1,6 @@
 {
   "name": "axios-cookie-auth",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "A lightweight Axios helper for managing httpOnly cookies and automatic token refresh with retries in TypeScript.",
   "main": "dist/useApi.js",
   "types": "dist/useApi.d.ts",
