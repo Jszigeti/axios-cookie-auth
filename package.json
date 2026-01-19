@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "test": "vitest",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "echo \"Husky is managed automatically\""
   },
   "files": [
     "dist/",
@@ -43,7 +43,6 @@
     "globals": "^17.0.0",
     "happy-dom": "^20.0.11",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
     "prettier": "^3.7.3",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.0",
