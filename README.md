@@ -1,3 +1,5 @@
+> Stable and no longer maintained. It does what it says, I just do not plan new features. Issues stay open for reading.
+
 # `axios-cookie-auth`
 
 [![CI](https://github.com/Jszigeti/axios-cookie-auth/actions/workflows/ci.yml/badge.svg)](https://github.com/Jszigeti/axios-cookie-auth/actions/workflows/ci.yml)
